@@ -1,20 +1,7 @@
-# Deprecation notice
+# Deprecation warning
 
-On November 13th 2018 Google issued the following statement:
-
-> We want to let you know that in October 2019 we will begin to sunset our Google Analytics for mobile apps reporting and the Google Analytics Services SDK. 
->
-> Data collection and processing for such properties will stop on October 31, 2019. 
-
-The message is quite clear, and therefore I am officially deprecating this library. If you want to continue using Google's solutions for analytics, I recommend you move to Google Analytics for Firebase instead. 
-
-For React Native, there is a great library called [react-native-firebase](https://github.com/invertase/react-native-firebase) which implements Analytics (and other Firebase solutions).
-
-I will continue to support this library for minor fixes, but no major changes will occur. The repository itself will be archived sometime in 2019.
-
-Thanks to everyone who have used or contributed to this library!
-
-\- Christian ([@cbrevik](https://github.com/cbrevik))
+This is a fork of [react-native-google-analytics-bridge by idehub](https://github.com/idehub/react-native-google-analytics-bridge). That library has been archived and deprecated, please read the readme there.
+This fork is to make fixes in the library, but may be deprecated too in a near future.
 
 # GoogleAnalyticsBridge [![npm version](https://img.shields.io/npm/v/react-native-google-analytics-bridge.svg)](https://www.npmjs.com/package/react-native-google-analytics-bridge) [![Build Status](https://travis-ci.org/idehub/react-native-google-analytics-bridge.svg?branch=master)](https://travis-ci.org/idehub/react-native-google-analytics-bridge)
 
@@ -245,7 +232,7 @@ Sets if OptOut is active and disables Google Analytics. This is disabled by defa
 
 ##### Parameters
 
--   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+-   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**
 
 ##### Examples
 
@@ -260,7 +247,7 @@ Events, screen views, etc, are sent in batches to your tracker. This function al
 
 ##### Parameters
 
--   `intervalInSeconds` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `intervalInSeconds` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**
 
 ##### Examples
 
@@ -274,7 +261,7 @@ When enabled the native library prevents any data from being sent to Google Anal
 
 ##### Parameters
 
--   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+-   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**
 
 ##### Examples
 
@@ -430,9 +417,9 @@ Track a social interaction, Facebook, Twitter, etc.
 
 ##### Parameters
 
--   `network` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `action` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `targetUrl` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `network` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+-   `action` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+-   `targetUrl` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 -   `payload` **[HitPayload](#hitpayload)** (Optional) An object containing the hit payload
 
 ##### Examples
@@ -479,7 +466,7 @@ Get the client id to be used for purpose of logging etc.
 tracker.getClientId().then(clientId => console.log("Client id is: ", clientId));
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>**
 
 #### allowIDFA
 
@@ -576,7 +563,7 @@ If you are using multiple trackers on iOS, this will enable & disable on all tra
 
 ##### Parameters
 
--   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+-   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**
 
 #### dispatch
 
@@ -630,7 +617,7 @@ Call once to open the container for all subsequent static calls.
 
 ##### Parameters
 
--   `containerId` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `containerId` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ##### Examples
 
@@ -638,7 +625,7 @@ Call once to open the container for all subsequent static calls.
 GoogleTagManager.openContainerWithId('GT-NZT48').then((..) => ..)
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>**
 
 #### refreshContainer
 
@@ -652,7 +639,7 @@ No such limitations has been mentioned for iOS containers, though.
 GoogleTagManager.refreshContainer().then((..) => ..)
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>**
 
 #### boolForKey
 
@@ -660,7 +647,7 @@ Retrieves a boolean value with the given key from the opened container.
 
 ##### Parameters
 
--   `key` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `key` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ##### Examples
 
@@ -668,7 +655,7 @@ Retrieves a boolean value with the given key from the opened container.
 GoogleTagManager.boolForKey("key").then(val => console.log(val));
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>**
 
 #### stringForKey
 
@@ -676,7 +663,7 @@ Retrieves a string with the given key from the opened container.
 
 ##### Parameters
 
--   `key` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `key` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ##### Examples
 
@@ -684,7 +671,7 @@ Retrieves a string with the given key from the opened container.
 GoogleTagManager.stringForKey("key").then(val => console.log(val));
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>**
 
 #### doubleForKey
 
@@ -692,7 +679,7 @@ Retrieves a number with the given key from the opened container.
 
 ##### Parameters
 
--   `key` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `key` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ##### Examples
 
@@ -700,7 +687,7 @@ Retrieves a number with the given key from the opened container.
 GoogleTagManager.doubleForKey("key").then(val => console.log(val));
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)>** 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)>**
 
 #### pushDataLayerEvent
 
@@ -719,7 +706,7 @@ GoogleTagManager.pushDataLayerEvent({
 }).then(success => console.log(success));
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>** 
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)>**
 
 #### registerFunctionCallTagHandler
 
@@ -727,8 +714,8 @@ Register Function Call tag handler
 
 ##### Parameters
 
--   `functionName` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `handler` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** 
+-   `functionName` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+-   `handler` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)**
 
 #### setVerboseLoggingEnabled
 
@@ -736,7 +723,7 @@ Sets logger to verbose, default is warning
 
 ##### Parameters
 
--   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+-   `enabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**
 
 ### TimingMetadata
 
@@ -898,7 +885,7 @@ Populate this event-object with values to push to the DataLayer. The only requir
 
 #### Parameters
 
--   `event` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `event` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 #### Examples
 
@@ -933,8 +920,8 @@ Used by `HitPayload` when populating product actions or impressions
 
 #### Parameters
 
--   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+-   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 -   `category` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (Optional)
 -   `brand` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (Optional)
 -   `variant` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (Optional)
@@ -965,7 +952,7 @@ Used by `HitPayload` when describing a product action
 
 #### Parameters
 
--   `action` **[ProductActionEnum](#productactionenum)** 
+-   `action` **[ProductActionEnum](#productactionenum)**
 -   `transaction` **[Transaction](#transaction)** (Optional)
 -   `checkoutStep` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** (Optional)
 -   `checkoutOption` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (Optional)
@@ -995,7 +982,7 @@ Used by `ProductAction` when populating describing a purchase/transaction
 
 #### Parameters
 
--   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 -   `affiliation` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (Optional)
 -   `revenue` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** (Optional - but not really)
 -   `tax` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** (Optional)
