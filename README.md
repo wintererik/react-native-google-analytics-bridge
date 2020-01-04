@@ -40,14 +40,15 @@ The newest version of this library has a new API surface. The API changes are in
 
 ## Installation and linking libraries
 
+-   For React Native >= `0.60` use master branch
 -   For React Native >= `0.40` use version `5.0.0` (and up) of this module.
 -   For React Native &lt; `0.40` use version `4.0.3`.
 
 Install with npm: `npm install --save react-native-google-analytics-bridge`
-
 Or, install with yarn: `yarn add react-native-google-analytics-bridge`
 
-Either way, then link with: `react-native link react-native-google-analytics-bridge`
+For RN >= 0.60, no need to link library but run `pod install` for ios.
+For RN < 0.60, then manually link with: `react-native link react-native-google-analytics-bridge`
 
 If it doesn't work immediately after this, consult the [manual installation guide](https://github.com/idehub/react-native-google-analytics-bridge/wiki/Manual-installation). Both Android and iOS has a couple of prerequisite SDKs linked and installed.
 

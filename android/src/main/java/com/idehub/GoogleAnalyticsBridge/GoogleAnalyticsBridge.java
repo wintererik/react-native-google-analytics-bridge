@@ -1,6 +1,6 @@
 package com.idehub.GoogleAnalyticsBridge;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -269,7 +269,7 @@ public class GoogleAnalyticsBridge extends ReactContextBaseJavaModule {
             tracker.enableExceptionReporting(enabled);
         }
     }
-  
+
     @ReactMethod
     public void createNewSession(String trackerId, String screenName) {
         Tracker tracker = getTracker(trackerId);
